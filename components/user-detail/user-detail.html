@@ -1,0 +1,105 @@
+<div class="container">
+    <div class="row">
+        <div class="users-title">
+            <h1 class="users-title__title">Usuarios desde: </h1>
+            <code class="users-title__code">{{url}}</code>
+        </div>
+        <section class="list-users">
+            <div ng-repeat="i in data">
+                <div class="users-box">
+                    <div class="users-box__group group-name">
+                        <!-- <i class="far fa-user"></i> -->
+                        <span class="users-box__name">
+                            {{i.name}}
+                        </span>
+                    </div>
+                    <div class="users-box__group">
+                        <i class="far fa-user users-box__icon"></i>
+                        <span class="users-box__username">
+                            {{i.username}}
+                        </span>
+                    </div>
+                    <div class="users-box__group">
+                        <i class="far fa-envelope users-box__icon"></i>
+                        <span class="users-box__email">
+                            {{i.email}}
+                        </span>
+                    </div>
+                    <div class="users-box__group">
+                        <i class="far fa-address-card users-box__icon"></i>
+                        <span class="users-box__address">
+                            {{i.address.city}}, {{i.address.street}}
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<style lang="scss">
+    .users-title {
+        margin: 3rem 0 2rem 0;
+    }
+
+    .users-title__title {
+        font-size: 1.8rem;
+        color: #333;
+    }
+
+    .users-title__code {
+        font-size: 1.5rem;
+    }
+
+    .list-users {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 768px) {
+        .list-users {
+            justify-content: center;
+        }
+
+    }
+
+    .users-box {
+        padding: 1.5rem 1.5rem;
+        border: 1px solid #eaeaea;
+        margin-bottom: 3rem;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
+        transition: .3s;
+        width: 20rem;
+    }
+
+    .users-box:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+    }
+
+    .users-box__group {}
+
+    .users-box__icon {
+        font-size: .9rem;
+    }
+
+    .group-name {
+        margin-bottom: .6rem;
+    }
+
+    .users-box__name {
+        font-size: 1.05em;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .users-box__username,
+    .users-box__email,
+    .users-box__address {
+        margin-bottom: .1rem;
+        font-size: .9rem;
+        margin-left: .15rem;
+        color: #333;
+    }
+</style>
