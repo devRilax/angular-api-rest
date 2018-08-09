@@ -13,22 +13,16 @@
     <title>AngularJS API Rest</title>
 </head>
 
-<body ng-app="myApp" ng-controller="myController as vm">
+<body ng-app="myApp" ng-controller="myController">
 
     <header-component></header-component>
-    <user-detail></user-detail>
-    <!-- <user-list></user-list> -->
-
-    <p ng-repeat="text in texts">
-        <!-- {{text}} -->
-    </p>
-
+    <user-list></user-list>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="components/header-component/header-component.js"></script>
     <script src="components/user-list/user-list.js"></script>
+    <script src="components/user-detail/user-detail.js"></script>
 </body>
-
 
 </html>
