@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('userList', [])
     .component('userList', {
         templateUrl: '/components/user-list/user-list.html',
